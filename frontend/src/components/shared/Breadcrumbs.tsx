@@ -1,0 +1,2 @@
+import { Link,useLocation } from 'react-router-dom'
+export function Breadcrumbs(){const parts=useLocation().pathname.split('/').filter(Boolean);return <nav className="mb-2 flex items-center gap-2 text-xs text-slate-400"><Link to="/admin/dashboard" className="hover:text-violet-600">Admin</Link>{parts.slice(1).map((part,index)=><span key={part} className="flex items-center gap-2"><span>/</span><span className={index===parts.length-2?'text-slate-600':'capitalize'}>{part.replaceAll('-',' ')}</span></span>)}</nav>}

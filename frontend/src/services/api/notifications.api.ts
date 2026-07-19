@@ -1,0 +1,2 @@
+import { notifications } from '../mock/data/seed';import { mockRequest } from '../mock/mockApi'; import type { Notification } from '../../types/notification'; let items=[...notifications]
+export const notificationsApi={list:()=>mockRequest(items),save:async(n:Notification)=>{items=[n,...items];return mockRequest(n)},remove:async(id:string)=>{items=items.filter(x=>x.id!==id);return mockRequest(undefined)}}
