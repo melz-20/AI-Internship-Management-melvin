@@ -1,0 +1,4 @@
+function DateRangePicker({ startDate, endDate, onStartDateChange, onEndDateChange, error }) {
+  return <div className="grid gap-4 sm:grid-cols-2"><label className="text-sm font-medium text-slate-700">Start date<input type="date" value={startDate} onChange={(event) => onStartDateChange(event.target.value)} className="mt-1.5 block w-full rounded-xl border border-slate-200 px-3 py-2.5 outline-none focus:border-violet-500 focus:ring-4 focus:ring-violet-100" /></label><label className="text-sm font-medium text-slate-700">End date<input type="date" min={startDate} value={endDate} onChange={(event) => onEndDateChange(event.target.value)} className="mt-1.5 block w-full rounded-xl border border-slate-200 px-3 py-2.5 outline-none focus:border-violet-500 focus:ring-4 focus:ring-violet-100" /></label>{error && <p className="sm:col-span-2 text-sm text-red-600">{error}</p>}</div>;
+}
+export default DateRangePicker;
