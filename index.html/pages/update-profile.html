@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Update Profile</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4efff;
+display:flex;
+justify-content:center;
+padding:40px;
+}
+
+.container{
+
+width:650px;
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+h1{
+
+text-align:center;
+color:#6a11cb;
+margin-bottom:20px;
+
+}
+
+.profile{
+
+text-align:center;
+margin-bottom:20px;
+
+}
+
+.profile img{
+
+width:150px;
+height:150px;
+border-radius:50%;
+border:5px solid #6a11cb;
+object-fit:cover;
+
+}
+
+.profile input{
+
+margin-top:15px;
+
+}
+
+label{
+
+display:block;
+font-weight:bold;
+margin-top:15px;
+
+}
+
+input,select{
+
+width:100%;
+padding:12px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+padding:14px;
+margin-top:25px;
+background:#6a11cb;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#4e0ea6;
+
+}
+
+.back{
+
+background:#555;
+
+}
+
+.back:hover{
+
+background:#333;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Update Profile</h1>
+
+<div class="profile">
+
+<img id="preview" src="https://via.placeholder.com/150" alt="Profile">
+
+<br>
+
+<input type="file" id="photo" accept="image/*">
+
+</div>
+
+<label>Student Name</label>
+<input type="text" id="name">
+
+<label>Register Number</label>
+<input type="text" id="reg">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Phone Number</label>
+<input type="text" id="phone">
+
+<label>Department</label>
+
+<select id="department">
+
+<option>B.Sc Computer Science</option>
+
+<option>BCA</option>
+
+<option>B.Sc AI</option>
+
+<option>B.Sc IT</option>
+
+</select>
+
+<label>Batch</label>
+
+<input type="text" id="batch">
+
+<button onclick="saveProfile()">Save Profile</button>
+
+<button class="back" onclick="window.location.href='settings.html'">
+Back to Settings
+</button>
+
+</div>
+
+<script>
+
+const photo=document.getElementById("photo");
+const preview=document.getElementById("preview");
+
+photo.onchange=function(){
+
+const file=this.files[0];
+
+if(file){
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+preview.src=e.target.result;
+
+localStorage.setItem("profileImage",e.target.result);
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+};
+
+window.onload=function(){
+
+document.getElementById("name").value=localStorage.getItem("name")||"";
+
+document.getElementById("reg").value=localStorage.getItem("reg")||"";
+
+document.getElementById("email").value=localStorage.getItem("email")||"";
+
+document.getElementById("phone").value=localStorage.getItem("phone")||"";
+
+document.getElementById("department").value=localStorage.getItem("department")||"B.Sc Computer Science";
+
+document.getElementById("batch").value=localStorage.getItem("batch")||"";
+
+if(localStorage.getItem("profileImage")){
+
+preview.src=localStorage.getItem("profileImage");
+
+}
+
+}
+
+function saveProfile(){
+
+localStorage.setItem("name",document.getElementById("name").value);
+
+localStorage.setItem("reg",document.getElementById("reg").value);
+
+localStorage.setItem("email",document.getElementById("email").value);
+
+localStorage.setItem("phone",document.getElementById("phone").value);
+
+localStorage.setItem("department",document.getElementById("department").value);
+
+localStorage.setItem("batch",document.getElementById("batch").value);
+
+alert("Profile Updated Successfully");
+
+}
+
+</script>
+
+</body>
+</html>

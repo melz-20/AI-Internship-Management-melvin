@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Notification Settings</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4efff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+
+width:450px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+
+}
+
+h1{
+
+color:#6a11cb;
+
+margin-bottom:20px;
+
+}
+
+label{
+
+display:block;
+
+margin:15px 0;
+
+font-size:18px;
+
+}
+
+button{
+
+background:#6a11cb;
+
+color:white;
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+
+button:hover{
+
+background:#5210a5;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Notification Settings</h1>
+
+<label>
+<input type="checkbox" checked>
+ Email Notifications
+</label>
+
+<label>
+<input type="checkbox" checked>
+ SMS Notifications
+</label>
+
+<label>
+<input type="checkbox">
+ Internship Updates
+</label>
+
+<label>
+<input type="checkbox">
+ Batch Announcements
+</label>
+
+<button onclick="save()">Save Settings</button>
+
+<button onclick="window.location.href='settings.html'">
+Back
+</button>
+
+</div>
+
+<script>
+
+function save(){
+
+alert("Settings Saved Successfully");
+
+}
+
+</script>
+
+</body>
+</html>

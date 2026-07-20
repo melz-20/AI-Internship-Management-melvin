@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4efff;
+display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:240px;
+height:100vh;
+background:#6a0dad;
+color:white;
+padding:20px;
+position:fixed;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+padding:15px;
+margin:8px 0;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+}
+
+.sidebar a:hover{
+background:white;
+color:#6a0dad;
+}
+
+/* Main */
+
+.main{
+margin-left:260px;
+padding:40px;
+width:100%;
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+max-width:900px;
+margin:auto;
+}
+
+.top{
+display:flex;
+align-items:center;
+gap:30px;
+margin-bottom:30px;
+}
+
+.profile-img{
+
+width:140px;
+height:140px;
+border-radius:50%;
+background:#6a0dad;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:70px;
+}
+
+.info h1{
+color:#6a0dad;
+margin-bottom:10px;
+}
+
+.status{
+display:inline-block;
+background:#28a745;
+color:white;
+padding:6px 15px;
+border-radius:20px;
+}
+
+.details{
+display:grid;
+grid-template-columns:200px auto;
+row-gap:18px;
+margin-top:30px;
+font-size:18px;
+}
+
+.details b{
+color:#6a0dad;
+}
+
+.skills{
+margin-top:35px;
+}
+
+.skill{
+display:inline-block;
+background:#6a0dad;
+color:white;
+padding:8px 15px;
+border-radius:20px;
+margin:5px;
+}
+
+.btn{
+margin-top:35px;
+padding:12px 25px;
+background:#6a0dad;
+color:white;
+text-decoration:none;
+border-radius:8px;
+display:inline-block;
+}
+
+.btn:hover{
+background:#8a2be2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>AI Internship</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="profile.html">👤 Student Profile</a>
+
+<a href="batch.html">📚 Batch Management</a>
+
+<a href="time.html">⏰ Time Management</a>
+
+<a href="internship.html">💼 Internship</a>
+
+<a href="notification.html">🔔 Notifications</a>
+
+<a href="settings.html">⚙ Settings</a>
+
+<a href="../index.html">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+
+<div class="top">
+
+<div class="profile-img">
+👩
+</div>
+
+<div class="info">
+
+<h1>Gajalakshmi S</h1>
+
+<p>B.Sc Computer Science</p>
+
+<span class="status">Active Student</span>
+
+</div>
+
+</div>
+
+<div class="details">
+
+<b>Student ID</b>
+<span>AI2026001</span>
+
+<b>College</b>
+<span>Jeppiaar College of Arts and Science</span>
+
+<b>Email</b>
+<span>gaja@gmail.com</span>
+
+<b>Phone</b>
+<span>9876543210</span>
+
+<b>Batch</b>
+<span>AI Internship Batch A</span>
+
+<b>Mentor</b>
+<span>Priya</span>
+
+<b>Attendance</b>
+<span>95%</span>
+
+</div>
+
+<div class="skills">
+
+<h2 style="color:#6a0dad;">Skills</h2>
+
+<span class="skill">HTML</span>
+
+<span class="skill">CSS</span>
+
+<span class="skill">JavaScript</span>
+
+<span class="skill">Python</span>
+
+</div>
+
+<a class="btn" href="dashboard.html">⬅ Back to Dashboard</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

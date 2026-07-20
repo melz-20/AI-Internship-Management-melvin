@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+display:flex;
+background:#f3f0ff;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:260px;
+height:100vh;
+background:linear-gradient(180deg,#6a0dad,#7b2cbf);
+padding:25px;
+position:fixed;
+left:0;
+top:0;
+}
+
+.sidebar h2{
+color:white;
+margin-bottom:40px;
+font-size:36px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar ul li{
+margin:18px 0;
+}
+
+.sidebar ul li a{
+color:white;
+text-decoration:none;
+font-size:20px;
+display:block;
+padding:12px;
+border-radius:8px;
+transition:.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active{
+background:white;
+color:#6a0dad;
+}
+
+/* Main */
+
+.main{
+margin-left:280px;
+padding:40px;
+width:100%;
+}
+
+.card{
+background:white;
+border-radius:18px;
+padding:35px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+max-width:800px;
+margin:auto;
+}
+
+.card h1{
+color:#6a0dad;
+margin-bottom:30px;
+}
+
+.option{
+background:#efe9ff;
+padding:18px;
+margin:15px 0;
+border-radius:10px;
+font-size:22px;
+cursor:pointer;
+transition:.3s;
+}
+
+.option:hover{
+background:#6a0dad;
+color:white;
+transform:translateX(8px);
+}
+
+.logout{
+background:red;
+color:white;
+}
+
+.back{
+margin-top:25px;
+padding:14px 25px;
+border:none;
+background:#6a0dad;
+color:white;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.back:hover{
+background:#4d078f;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>AI Internship</h2>
+
+<ul>
+
+<li><a href="../dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="profile.html">👤 Student Profile</a></li>
+
+<li><a href="batch.html">📚 Batch Management</a></li>
+
+<li><a href="time.html">⏰ Time Management</a></li>
+
+<li><a href="internship.html">💼 Internship</a></li>
+
+<li><a href="notification.html">🔔 Notifications</a></li>
+
+<li><a class="active" href="settings.html">⚙ Settings</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+
+<h1>⚙ Settings</h1>
+
+<div class="option" onclick="location.href='update-profile.html'">
+👤 Update Profile
+</div>
+
+<div class="option" onclick="location.href='notification-settings.html'">
+🔔 Notification Settings
+</div>
+
+<div class="option" onclick="location.href='dark-mode.html'">
+🌙 Dark Mode
+</div>
+
+<button class="back" onclick="location.href='dashboard.html'">
+← Back to Dashboard
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function logout(){
+
+if(confirm("Do you want to logout?")){
+
+window.location.href="../login.html";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

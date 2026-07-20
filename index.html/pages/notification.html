@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Settings</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f3efff;
+}
+
+.container{
+    width:500px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#6A0DAD;
+    margin-bottom:30px;
+}
+
+.option{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f3ecff;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+input[type="checkbox"]{
+    width:22px;
+    height:22px;
+    accent-color:#6A0DAD;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.save{
+    background:#6A0DAD;
+    color:white;
+}
+
+.save:hover{
+    background:#4B0082;
+}
+
+.back{
+    background:#777;
+    color:white;
+}
+
+.back:hover{
+    background:#555;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔔 Notification Settings</h1>
+
+<div class="option">
+<label>Email Notifications</label>
+<input type="checkbox" id="email" checked>
+</div>
+
+<div class="option">
+<label>SMS Notifications</label>
+<input type="checkbox" id="sms">
+</div>
+
+<div class="option">
+<label>Internship Updates</label>
+<input type="checkbox" id="internship" checked>
+</div>
+
+<div class="option">
+<label>Batch Announcements</label>
+<input type="checkbox" id="batch" checked>
+</div>
+
+<div class="option">
+<label>Assignment Reminders</label>
+<input type="checkbox" id="assignment">
+</div>
+
+<button class="save" onclick="saveNotification()">
+💾 Save Settings
+</button>
+
+<button class="back" onclick="window.location.href='dashboard.html'">
+⬅ Back to Dashboard
+</button>
+
+</div>
+
+<script>
+
+function saveNotification(){
+
+let email=document.getElementById("email").checked;
+let sms=document.getElementById("sms").checked;
+let internship=document.getElementById("internship").checked;
+let batch=document.getElementById("batch").checked;
+let assignment=document.getElementById("assignment").checked;
+
+alert(
+"Notification Settings Saved Successfully!\n\n"+
+"Email: "+(email?"ON":"OFF")+"\n"+
+"SMS: "+(sms?"ON":"OFF")+"\n"+
+"Internship Updates: "+(internship?"ON":"OFF")+"\n"+
+"Batch Announcements: "+(batch?"ON":"OFF")+"\n"+
+"Assignment Reminders: "+(assignment?"ON":"OFF")
+);
+
+}
+
+</script>
+
+</body>
+</html>

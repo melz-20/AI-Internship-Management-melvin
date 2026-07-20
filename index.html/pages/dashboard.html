@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Internship Dashboard</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+display:flex;
+background:#f4f0ff;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:250px;
+height:100vh;
+background:linear-gradient(180deg,#6A0DAD,#8A2BE2);
+position:fixed;
+left:0;
+top:0;
+}
+
+.sidebar h2{
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.sidebar a{
+display:block;
+padding:15px 25px;
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+background:white;
+color:#6A0DAD;
+border-left:5px solid #6A0DAD;
+}
+
+/* Main */
+
+.main{
+margin-left:250px;
+padding:30px;
+width:100%;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.header h1{
+color:#6A0DAD;
+}
+
+.profile{
+background:#6A0DAD;
+color:white;
+padding:10px 20px;
+border-radius:25px;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+text-align:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h2{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.card h3{
+color:#6A0DAD;
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
+color:#777;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>AI Internship</h2>
+
+<a class="active" href="dashboard.html">🏠 Dashboard</a>
+
+<a href="profile.html">👤 Student Profile</a>
+
+<a href="batch.html">📚 Batch Management</a>
+
+<a href="time.html">⏰ Time Management</a>
+
+<a href="internship.html">💼 Internship Details</a>
+
+<a href="notification.html">🔔 Notifications</a>
+
+<a href="settings.html">⚙ Settings</a>
+
+<a href="../index.html">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+
+<h1>Welcome to AI Internship Dashboard</h1>
+
+<div class="profile">
+👤 Student
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card" onclick="location.href='profile.html'">
+<h2>👤</h2>
+<h3>Student Profile</h3>
+<p>View and update student information.</p>
+</div>
+
+<div class="card" onclick="location.href='batch.html'">
+<h2>📚</h2>
+<h3>Batch Management</h3>
+<p>Manage internship batch details.</p>
+</div>
+
+<div class="card" onclick="location.href='time.html'">
+<h2>⏰</h2>
+<h3>Time Management</h3>
+<p>Track attendance and working hours.</p>
+</div>
+
+<div class="card" onclick="location.href='internship.html'">
+<h2>💼</h2>
+<h3>Internship Details</h3>
+<p>View internship information.</p>
+</div>
+
+<div class="card" onclick="location.href='notification.html'">
+<h2>🔔</h2>
+<h3>Notifications</h3>
+<p>Check latest internship updates.</p>
+</div>
+
+<div class="card" onclick="location.href='settings.html'">
+<h2>⚙</h2>
+<h3>Settings</h3>
+<p>Manage account settings.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>© 2026 AI Internship Management System</p>
+</div>
+
+</div>
+
+</body>
+</html>
