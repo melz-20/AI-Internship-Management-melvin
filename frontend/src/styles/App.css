@@ -1,0 +1,124 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card {
+  background: var(--card);
+  border: none !important;
+  border-radius: 18px !important;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary {
+  background: var(--primary) !important;
+  border: none !important;
+  border-radius: 10px !important;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark) !important;
+}
+
+.btn-warning {
+  border-radius: 8px !important;
+}
+
+.btn-danger {
+  border-radius: 8px !important;
+}
+
+/* ===========================
+   FORM INPUTS
+=========================== */
+
+.form-control,
+.form-select {
+  border-radius: 10px !important;
+  border: 1px solid var(--border) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.2) !important;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: var(--primary);
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background: var(--primary-light);
+}
+
+/* ===========================
+   BADGES
+=========================== */
+
+.badge {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* ===========================
+   NAVBAR LINKS
+=========================== */
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--text-light) !important;
+}
