@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-surface text-ink font-sans antialiased;
+}
+
+/* Thin, unobtrusive scrollbar for the sidebar and scrollable panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Reusable card utility so every panel shares the same look */
+.card {
+  @apply bg-surface-card rounded-2xl shadow-card border border-gray-100 p-5;
+}

@@ -1,0 +1,3 @@
+import { mentors, students } from '../mock/data/seed'; import { mockRequest } from '../mock/mockApi'; import type { Mentor } from '../../types/mentor'
+let items=[...mentors]
+export const mentorsApi={list:()=>mockRequest(items),get:(id:string)=>mockRequest(items.find(x=>x.id===id)!),save:async(m:Mentor)=>{const i=items.findIndex(x=>x.id===m.id); if(i>=0)items[i]=m;else items=[m,...items]; return mockRequest(m)},remove:async(id:string)=>{items=items.filter(x=>x.id!==id);return mockRequest(undefined)},status:async(id:string,status:Mentor['status'])=>{const x=items.find(v=>v.id===id)!;x.status=status;return mockRequest(x)},availableStudents:()=>mockRequest(students)}
